@@ -7,7 +7,21 @@ Write a function returns the number of occurrences of the most frequent characte
 */
 
 const timesOfMostFreqChar = (str) => {
-  // YOUR CODE HERE
+  let obj = {};
+  let max = 0;
+  for (let index = 0; index < str.length; index++) {
+    obj[str[index]] ? obj[str[index]]++ : (obj[str[index]] = 1);
+  }
+  for (const key in obj) {
+    if (obj[key]>max) {
+     max=obj[key]
+    }
+  }
+
+  if (max === 1) {
+    return " no occurrences all return once ";
+  }
+  return max;
 };
 
 /* 
@@ -20,4 +34,3 @@ timesOfMostFreqChar('Hi Toqa') // => " no occurrences all return once "
 
 
 */
-
