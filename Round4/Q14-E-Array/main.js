@@ -7,7 +7,11 @@ Write a JavaScript function to copy an array.
 */
 
 const array_Copy = (arr) => {
-  // YOUR CODE HERE
+  const newArr =[]
+  const result = arr.filter((element ,index)=>{
+    return newArr.push(element)
+  })
+  return result
 };
 
 /*
