@@ -6,7 +6,14 @@ console.log(arrowTitle);
 Given an arbitrary input string, return the first Non Iteratived character. For strings with all repeats, return 'sorry'
 */
 const findFirstNonIterativedCharacter = (str) => {
-  // YOUR CODE HERE
+  for (let i = 0; i < str.length; i++) {
+    let find = str.charAt(i);
+    if (str.indexOf(find) == str.lastIndexOf(find)) {
+      return find;
+    } else {
+      return "sorry";
+    }
+  }
 };
 
 /*
@@ -17,4 +24,3 @@ findFirstNonIterativedCharacter("Uber for horses"); // => "U"
 findFirstNonIterativedCharacter("Hey Heba baby "); // => "sorry"
 findFirstNonIterativedCharacter("good dog"); // => "sorry"
 */
-
