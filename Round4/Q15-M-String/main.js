@@ -9,6 +9,7 @@ Hint : her resource for Regular expressions you can check it and read more (http
 
 const longestWord_2 = (str) => {
   // YOUR CODE HERE
+  const regular_Expressions = //
 };
 
 /* 

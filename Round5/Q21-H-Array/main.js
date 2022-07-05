@@ -13,7 +13,8 @@ Bubble sort is considered the most basic sorting algorithm. It works by starting
 */
 
 const findBubbleSort = (arr) => {
-  // YOUR CODE HERE
+let result = arr.sort((a,b)=> a - b)
+return result
 };
 
 /*

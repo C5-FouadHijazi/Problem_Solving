@@ -16,6 +16,20 @@ const findFirstNonIterativedCharacter = (str) => {
   }
 };
 
+const findFirstNonIterativedCharacter1 = (str) => {
+  str.replceAll(" ");
+  const obj = {};
+  for (const char of str) {
+    obj[char] ? obj[char]++ : (obj[char] = 1);
+  }
+  for (const key in obj) {
+    if (obj[key] === 1) {
+      return key;
+    }
+    return "sorry";
+  }
+};
+
 /*
 Examples:
 findFirstNonIterativedCharacter("ABCDBIRDUP"); // => "A"
