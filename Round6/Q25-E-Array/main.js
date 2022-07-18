@@ -6,10 +6,8 @@ Write a JavaScript function to check whether an `input` is an array or not.
 */
 
 const isItArray = (input) => {
-  if(input instanceof Array) {
-      return !input.some((elem)=> {
-          return elem instanceof Array;
-      });
+  if (input instanceof Array) {
+    return input instanceof Array;
   }
   return false;
 };
