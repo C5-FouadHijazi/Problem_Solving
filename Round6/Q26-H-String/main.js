@@ -12,22 +12,32 @@ const characterRecurrence = (str) => {
   let array = []
   let obj = {}
   let counter = 0
-  for (let i of str) {
-    i in obj ? obj[i]++ : obj[i] = 1;
+  /*   for (let i of str) {
+      i in obj ? obj[i]++ : obj[i] = 1;
+    } OR */
+
+  for (let i = 0; i < str.length; i++) {
+    obj[str[i]] ? obj[str[i]] + 1 : 1
   }
-  
-  for (let found in obj) {
-    array.push([found, obj[found]]);
+
+  /*   for (let found in obj) {
+      array.push([found, obj[found]]);
+    } */
+
+  for (const key in obj) {
+    array.push([key, obj[key]]);
   }
-  
-  array.sort((a,b) => b[1] - a[1]);
-  array.sort(function (a, b) {
-    if (a[1] === b[1] && a[0] > b[0]) {
-        return 1;
-    }
-  });
-  
-  return array;
+  return array
+}
+
+array.sort((a, b) => b[1] - a[1]);
+array.sort(function (a, b) {
+  if (a[1] === b[1] && a[0] > b[0]) {
+    return 1;
+  }
+});
+
+return array;
 }
 
 /* 

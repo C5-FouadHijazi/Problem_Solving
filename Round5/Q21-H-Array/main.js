@@ -12,9 +12,24 @@ Bubble sort is considered the most basic sorting algorithm. It works by starting
   • Once it gets to the end of the array, it starts over and repeats the process until the array is sorted numerically.
 */
 
+const findBubbleSort0 = (arr) => {
+  let result = arr.sort((a, b) => a - b);
+  return result;
+};
+
+
 const findBubbleSort = (arr) => {
-let result = arr.sort((a,b)=> a - b)
-return result
+  let swapped = true;
+  while (swapped) {
+    swapped = false;
+    for (let i = 0; i < arr.length; i++) {
+      if (arr[i] > arr[i + 1]) {
+        [arr[i]], (arr[i + 1] = [arr[i + 1]]), [arr[i]];
+        swapped = true;
+      }
+    }
+  }
+  return arr;
 };
 
 /*
@@ -23,4 +38,3 @@ findBubbleSort([7, 4, 1, 9, 23, 16]) // => [1, 4, 7, 9, 16, 23]
 findBubbleSort([4, -2, 3, 9, 16, 10]) // => [-2, 3, 4, 9, 10, 16]
 findBubbleSort([1, 4, 7, 18, 24, 20]) // => [1, 4, 7, 18, 20, 24]
 */
-
