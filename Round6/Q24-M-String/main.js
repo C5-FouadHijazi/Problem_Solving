@@ -14,11 +14,14 @@ If the username is valid then your program should return the string true, otherw
 */
 
 const usernameValidation = (str) => {
-  let need = /[a-zA-Z0-9_.-]/g
+  let need = str.match(/[a-zA-Z]/g)
+  let need2 = str.match(/\W\S/g)
   let result = str.match(need)
+
   console.log(result);
   console.log(result[0]);
-  if (result.length - 1 > 4 && result.length - 1 < 25 ) {
+
+  if (result.length >= 4 && result.length < 25 && need && !need2 && srt[srt.legnth -1] !== "_") {
     return true
   }
   return false
