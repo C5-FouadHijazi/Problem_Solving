@@ -10,7 +10,11 @@
 */
 
 const vowels = (str) => {
-  //TODO: your code here
-};
+const reg = str.match(/[a,e,i,o,u]/gi)
+
+return reg === false ? 0 : reg.length 
+}
+console.log(vowels("Hi There!"));
+console.log(vowels("Why do you ask?"));
 
 module.exports = vowels;
