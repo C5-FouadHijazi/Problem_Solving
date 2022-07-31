@@ -1,4 +1,4 @@
-console.log(arrowTitle);
+/* console.log(arrowTitle); */
 
 /* Even or Not */
 
@@ -11,10 +11,7 @@ Write a function that returns true if a number is even, and false otherwise.
 //If the will be even retun to us true || if the number not even return false
 
 const evenOrNot = (num) => {
-  if(num % 2 === 0){
-    return true
-  }
-  return false
+return num % 2 == 0 ? true : false
 };
 
 /*
@@ -26,5 +23,5 @@ evenOrNot(99) // => false
 evenOrNot(0) // => true
 evenOrNot(-8) // => true
 evenOrNot(-17) // => false
-*/
+
 module.exports = {evenOrNot} ;

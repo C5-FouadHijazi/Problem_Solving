@@ -10,14 +10,21 @@ Write a function returns the length of the longest sequence of 1s in an array of
 //
 const longestSequence = (arr) => {
   // YOUR CODE HERE
-  const answer = arr.forEach(element ,index => {
-    if (element === 0 ) {
-      return arr.splice(0)
+  let conter = 0
+  let result = 0
+  let x = 1
+  arr.forEach(element => {
+    if (element === x) {
+      conter++
+    } else if (conter > result) {
+      result = conter
+      conter = 0
     }
-    return  answer 
   })
-   
-  
+  if (result === 0) {
+    return "There is no one sequenced"
+  }
+  return result
 }
 
 /*

@@ -21,18 +21,30 @@ const findIntersection = (strArr) => {
   // YOUR CODE HERE
 
   let firstpart = strArr[0].split(",");
+
   let secoundpart = strArr[1].split(",");
+
   const result = firstpart.filter((element, index) => {
     return secoundpart.indexOf(element) !== -1
   });
+
   if (result.length !== 0) {
     return result.join(",")
   }
   return false
 };
+/*  const obj = {}
+  array = []
+  for (let i = 0; i < strArr[0].length; i++) {
 
+    obj[strArr[0][i]] = obj[strArr[0][i]] ? obj[strArr[0][i]] + 1 : 1
+  }
+  for (const key in obj)
+    if (obj.key === 1) {
+      return array.push(key)
+    } */
 /*
-Examples:1,4,
+Examples:
 findIntersection(['1, 3, 4, 7, 13', '1, 2, 4, 13, 15']); // => '1,4,13'
 findIntersection(['1, 3, 9, 10, 17, 18', '1, 4, 9, 10']); // => '1,9,10'
 findIntersection(['2, 5, 7, 14', '1, 25, 4, 13, 15']); // => false

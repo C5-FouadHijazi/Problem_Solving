@@ -13,13 +13,14 @@ Do not return duplicate characters and ignore whitespace in your returned string
 const jointCharacters = (str1, str2) => {
   // YOUR CODE HERE
   let str1Arry = str1.toLowerCase().replaceAll(" ", "").split("");
-  console.log(str1Arry);
+
   let str2Arry = str2.toLowerCase().replaceAll(" ", "").split("");
-  console.log(str2Arry);
+ 
+
   let resultArray = [];
 
    str1Arry.forEach((element) => {
-    console.log(element);
+    
     if (str2Arry.includes(element) && resultArray.includes(element) === false)
       resultArray.push(element);
   });

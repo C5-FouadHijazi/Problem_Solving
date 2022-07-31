@@ -14,19 +14,14 @@
 */
 
 const fizzBuzz = (n) => {
-  for (let n = 1; true; n++) {
-    if (n === 3) {
-      console.log("fizz");
-      continue
-    }
-    if (n === 5) {
-      console.log("buzz");
-      break
-    }
-    console.log(n);
+  for (let i = 1; i <= n; i++) {
+
+    (i % 3 === 0 && i % 5 == 0 ? console.log("fizzbuzz") : i % 3 === 0 ? console.log("fizz") : i % 5 === 0 ? console.log("buzz") : console.log(i))
+
   }
 }
-fizzBuzz(5);
+
+console.log(fizzBuzz(15));;
 
 
 module.exports = fizzBuzz;

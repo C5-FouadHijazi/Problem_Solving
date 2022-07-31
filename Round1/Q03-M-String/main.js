@@ -14,14 +14,14 @@ Write a function reverses the characters of every word of a sentence. sentences 
 const reverseEachWord = (str) => {
   // YOUR CODE HERE
   let array = str.split(" ");
-  const m = array.map((elem) => {
+  const result = array.map((elem) => {
     return elem.split("").reverse().join("");
   });
 
-  if (m.length -1 == 0) {
+  if (result.length -1 == 0) {
     return "Wrong!! it's empty string";
   } else {
-    return m.join(" ");
+    return result.join(" ");
   }
 };
 /* 
